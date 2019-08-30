@@ -123,6 +123,54 @@
 		        </div>
 		      </div>
 
+					
+					<button class="btn btn-defaul" id="modal">Abrir modal</button>
+
+		      <div class="modal fade bs-example-modal" id="modal1">
+          
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+
+					      <div class="modal-header auto-overflow skins myModal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true" style="color: white">&times;</span>x</button>
+					        <h4 class="modal-title" id="title_contratantes">NUEVO CONTRATANTE</h4>
+					      </div>
+					      
+					      <div class="modal-body" id="div_modal_body">
+					        
+					        <form action="" id="form_contratantes_gmc">
+					        
+					          <input type="text" name="contratante_action" id="contratante_action" value="new_contratante_gmc" hidden>
+					          <input type="text" id="contratante_id" name="contratante_id" hidden>
+
+					          <div class="form-group col-md-8">
+					            <label for="">RAZÓN SOCIAL</label>
+					            <input type="text" class="form-control col-md-12" id="gmc_rsocial" name="gmc_rsocial" placeholder="Ej. CAMARA MEXICANA DE LA INDUSTRIA DE LA CONSTRUCCIÓN ">
+					          </div>
+
+					          <div class="form-group col-md-4">
+					            <label for="">RFC</label>
+					            <input type="text" class="form-control col-md-12" id="gmc_rfc" name="gmc_rfc" placeholder="Ej. CUPU800825569.">
+					          </div>
+
+
+
+					        </form>
+
+					      </div>
+
+					      <div class="modal-footer auto-overflow">
+					        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">CERRAR</button>
+					        <button type="button" class="btn btn-primary btn_modal_contratantes" id="">GUARDAR CAMBIOS</button>
+					      </div>
+
+					    </div>
+					  </div>
+
+					</div>
+
+
 		    </section>
 
 		</div>
@@ -136,7 +184,7 @@
 	<!-- jQuery 2.2.3 -->
 	<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 	<!-- Bootstrap 3.3.6 -->
-	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- Slimscroll -->
 	<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 	<!-- FastClick -->
@@ -145,6 +193,17 @@
 	<script src="assets/js/app.min.js"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="assets/js/demo.js"></script>
+
+	<script>
+		
+		$(document).on('click', '#modal', function(e){
+			e.preventDefault();
+
+			$('#modal1').modal('show');
+			
+		});
+
+	</script>
 </body>
 
 </html>
